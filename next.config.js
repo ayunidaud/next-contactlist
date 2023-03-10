@@ -9,7 +9,18 @@ const nextConfig = {
         permanent: true,
       },
     ]
-  }
+  },
+  images: {
+    // domains: ['rickandmortyapi.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'rickandmortyapi.com',
+        port: '',
+        pathname: '/api/character/avatar/**',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig
